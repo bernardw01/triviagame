@@ -100,7 +100,7 @@ div.sideBar {
 .panel-title, .panel-footer {
     font-size: larger;
     font-weight: bold;
-    font-family: "Comic Sans MS";
+    font-family: Arial;
     color: #e5f442;
 }
 
@@ -135,17 +135,26 @@ div.sideBar {
     top: 7px;
 }
 
+.buttonBar {
+    margin-top: 20px;
+}
+
+#display {
+
+}
 #progressHeader {
     margin-bottom: 5px;
 }
 
 .panel-transparent {
     background: rgba(136, 136, 136, .2);
+    position: relative;
 }
 
 .well-transparent {
     background: rgba(136, 136, 136, .5);
     color: floralwhite;
+    margin-top: 20px;
 }
 
 .progress {
@@ -157,8 +166,16 @@ div.sideBar {
     margin-bottom: 30px;
 }
 
-.media {
+.info {
     padding: 10px;
+    background: rgba(136, 136, 136, .75);
+    color: floralwhite;
+    margin-top: 20px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #269abc;
+
 }
 
 .media-image {

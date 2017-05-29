@@ -46,13 +46,24 @@
                 </div>
                 <div class="panel-body" id="gameStats">
                     <h5>Lets Play!</h5>
-                    <div class="well well-lg well-transparent">Thanks for trying our the City of Orlando Unofficial
+                    <div class="info">Thanks for trying our the City of Orlando Unofficial
                         Trivia game. In this game you will be asked questions about our beautiful city aka: "The City
                         Beautiful"!!
                     </div>
+                    <div class="info"><span id="timeLabel">Your Time:</span>
+                        <span id="display"></span>
+                    </div>
+                    <div class="info"><span id="questionTime">Your Stats:</span>
+                        <span id="laps"></span>
+                    </div>
+                    <div class="buttonBar">
+                        <button type="button" id="startBtn" class="btn btn-primary">Start</button>
+                        <button type="button" id="resetBtn" class="btn btn-primary">Reset</button>
+                    </div>
+                    <
                 </div>
-                <button type="button" id="startBtn" class="btn btn-primary">Start</button>
-                <button type="button" id="resetBtn" class="btn btn-primary">Reset</button>
+
+
                 <div class="panel-footer">
                     <span id="progressHeader">Your current progress</span>
                     <div class="progress">
@@ -74,7 +85,7 @@
 
                 </div>
                 <div class="panel-footer">
-                    <span id="timerHeader">Time Remaining</span>
+                    <span id="timerHeader">Time Allotment Utilized</span>
                     <div class="progress">
                         <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="75"
                              aria-valuemin="0" aria-valuemax="100" style="width:75%" id="timerProgressBar">
@@ -87,7 +98,11 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
 
+    });
+</script>
 
 </body>
 
