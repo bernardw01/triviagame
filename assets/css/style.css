@@ -102,12 +102,43 @@ div.sideBar {
     font-weight: bold;
     font-family: "Comic Sans MS";
     color: #e5f442;
+}
 
+.answer {
+    background: rgba(136, 136, 136, .75);
+    color: floralwhite;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    height: 35px;
+    padding-bottom: 5px;
+    border-radius: 9px;
+
+}
+
+.answer:hover {
+    background: rgba(244, 158, 66, .5);
+    font-weight: bold;
+
+}
+
+.answerText {
+    margin-left: 10px;
+    position: relative;
+    top: 4px;
+    font-family: Arial;
+}
+
+.answerIcon {
+    margin-left: 10px;
+    position: relative;
+
+    top: 7px;
 }
 
 #progressHeader {
     margin-bottom: 5px;
 }
+
 .panel-transparent {
     background: rgba(136, 136, 136, .2);
 }
@@ -125,8 +156,6 @@ div.sideBar {
     margin-left: 20px;
     margin-bottom: 30px;
 }
-
-
 
 .media {
     padding: 10px;

@@ -41,6 +41,14 @@ $(document).ready(function () {
     $('#startBtn').click(displayQuestion);
     $('#resetBtn').on('click', gameInit);
 
+    $('.answer').hover(function () {
+            console.log('answer mouse over')
+            this.removeClass('glyphicon glyphicon-check answerIcon');
+        },
+        function () {
+            this.addClass('glyphicon glyphicon-check answerIcon');
+        });
+
     function gameInit() {
         gameState.inProgress = false;
         gameState.currentQuestionRight = false;
@@ -93,6 +101,20 @@ $(document).ready(function () {
         qh.text(currQ.question);
         qp.append(qh);
 
+        for (var i = 0; i < currQ.answers.length; i++) {
+            var ans = $('<div>');
+            ans.addClass('answer');
+            ans.attr('id', i);
+            var icon = $('<span>');
+            icon.addClass('glyphicon glyphicon-check answerIcon');
+            var text = $('<span>');
+            text.addClass('answerText');
+            text.append(displayAnswer(currQ.answers[i]));
+            icon.append(text);
+            ans.append(icon);
+            qp.append(ans);
+        }
+
     }
 
     /**
@@ -106,9 +128,18 @@ $(document).ready(function () {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
-
-    function displayAnswer(answerTxt, rightAnswer) {
-
+    /**
+     * This function creates an HTML formatted answer to be displayed.
+     * @param answerTxt Text of the answer from the question object
+     * @param answerId The Index of the particular answer
+     * @returns {*|jQuery|HTMLElement}
+     */
+    function displayAnswer(answerTxt, answerId) {
+        var answer = $('<span>');
+        answer.attr('id', answerId);
+        //answer.addClass('answer');
+        answer.text(answerTxt);
+        return answer
     }
 
 });
