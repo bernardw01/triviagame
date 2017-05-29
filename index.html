@@ -3,44 +3,89 @@
 <html lang="en">
 
 <head>
-      <meta charset=utf-8>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta http-equiv="Content-Script-Type" content="text/javascript">
-      <title>Bernard L. Williams - Trivia Game</title>
-      <link href="assets/css/reset.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-            crossorigin="anonymous">
-      <link rel="stylesheet" href="https://bootswatch.com/cyborg/bootstrap.min.css">
-      <link href="assets/css/style.css" rel="stylesheet">
-      <script type="text/javascript" src="assets/javascript/jquery-3.2.1.js"></script>
-      <script src="assets/javascript/config.js"></script>
-      <script src="assets/javascript/app.js"></script>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <title>Bernard L. Williams - Trivia Game</title>
+
+    <link href="assets/css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link href="assets/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://bootswatch.com/cyborg/bootstrap.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="assets/javascript/jquery-3.2.1.js"></script>
+    <script src="assets/javascript/config.js"></script>
+    <script src="assets/javascript/app.js"></script>
+
 </head>
 
 <body>
 <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-            <div class="navbar-header">
-                  <a class="navbar-brand" href="#">Bernard L. Williams - Trivia Game</a>
-            </div>
-            <ul class="nav navbar-nav">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Bernard L. Williams - Trivia Game</a>
+        </div>
+        <ul class="nav navbar-nav">
 
-                  <li><a href='index.html' class="active">Lets Play Star Wars RPG!!</a></li>
-                  <li><a href="instructions.html">Instructions</a></li>
-            </ul>
-      </div>
+            <li><a href='index.html' class="active">Lets Play Some Trivia!!</a></li>
+            <li><a href="instructions.html">Instructions</a></li>
+        </ul>
+    </div>
 </nav>
 <div class="container">
-      <div class="row">
-            <div class="col-md-6">
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="panel panel-default panel-transparent">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Game Stats</h3>
+                </div>
+                <div class="panel-body" id="gameStats">
+                    <h5>Lets Play!</h5>
+                    <div class="well well-lg well-transparent">Thanks for trying our the City of Orlando Unofficial
+                        Trivia game. In this game you will be asked questions about our beautiful city aka: "The City
+                        Beautiful"!!
+                    </div>
+                </div>
+                <button type="button" id="startBtn" class="btn btn-primary">Start</button>
+                <button type="button" id="resetBtn" class="btn btn-primary">Reset</button>
+                <div class="panel-footer">
+                    <span id="progressHeader">Your current progress</span>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="75"
+                             aria-valuemin="0" aria-valuemax="100" style="width:75%" id="progressBar">
+                            70%
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default panel-transparent">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Your questions</h3>
+                </div>
+                <div class="panel-body" id="questionPanel">
+
+                </div>
+                <div class="panel-footer">
+                    <span id="timerHeader">Time Remaining</span>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="75"
+                             aria-valuemin="0" aria-valuemax="100" style="width:75%" id="timerProgressBar">
+                            70%
+                        </div>
+                    </div>
+                </div>
 
             </div>
-            <div class="col-md-6">
-
-            </div>
-      </div>
+        </div>
+    </div>
 </div>
 
 

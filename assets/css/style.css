@@ -57,6 +57,9 @@ a {
 }
 
 body {
+    background-image: url(../images/sunset.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 div.sideBarHeader {
@@ -94,14 +97,36 @@ div.sideBar {
 
 /* Extending bootstrap classes*/
 
-.panel-heading {
-    font-size: large;
+.panel-title, .panel-footer {
+    font-size: larger;
     font-weight: bold;
+    font-family: "Comic Sans MS";
+    color: #e5f442;
+
 }
 
+#progressHeader {
+    margin-bottom: 5px;
+}
 .panel-transparent {
     background: rgba(136, 136, 136, .2);
 }
+
+.well-transparent {
+    background: rgba(136, 136, 136, .5);
+    color: floralwhite;
+}
+
+.progress {
+    margin-top: 10px;
+}
+
+#startBtn, #resetBtn {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+
 
 .media {
     padding: 10px;
@@ -117,7 +142,7 @@ div.sideBar {
 
 .container {
     width: 100%;
-    background-image: url(../images/sunset.jpg);
+
     background-size: cover;
 }
 
