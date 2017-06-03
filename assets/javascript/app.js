@@ -154,8 +154,8 @@ $(document).ready(function () {
         function evaluateResponse() {
 
             console.log('---- Evaluate Response Function');
-            var state = gameState.toSource();
-            console.log(state);
+
+            console.log(gameState);
             if (gameState.waitingForAnswer && !freezeScreen) {
                 //gameState.waitingForAnswer = false;
                 var selectedAnswer = $(this).attr('ID');
